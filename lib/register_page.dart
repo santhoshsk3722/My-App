@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_auth_app/auth_service.dart';
-import 'package:my_auth_app/next_page.dart';
+import 'package:my_auth_app/loginpage.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -70,7 +70,7 @@ class _SignupState extends State<Signup> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const NextPage(),
+                        builder: (context) => const LoginPage(),
                       ),
                     );
                   } catch (e) {
