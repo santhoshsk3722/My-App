@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   child: const Text(
                     "Sign up here.",
-                    style: TextStyle(fontSize: 16),
+                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -111,7 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                         color: Colors.blue,
                         textColor: Colors.white,
                         child: const Text(
-                          'Login',
+                          'Sign In',
                           style: TextStyle(fontSize: 15),
                         ),
                       ),
