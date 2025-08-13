@@ -67,6 +67,9 @@ class _SignupState extends State<Signup> {
                       email: emailController.text.trim(),
                       password: passwordController.text.trim(),
                     );
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Registration Successful')),
+                    );
                     Navigator.push(
                       context,
                       MaterialPageRoute(

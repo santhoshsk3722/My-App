@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.blue,
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 80),
+        padding: const EdgeInsets.only(top: 100),
         child: Form(
           child: SingleChildScrollView(
             child: Column(
@@ -89,30 +89,12 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const RegisterPage(),
-                      ),
-                    );
-                  },
-                  child: const Text(
-                    "Sign up here.",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
-                  ),
-                ),
-                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      MaterialButton(
+                      ElevatedButton(
                         onPressed: () async {
                           try {
                             await authService.value.signIn(
@@ -131,28 +113,44 @@ class _LoginPageState extends State<LoginPage> {
                             );
                           }
                         },
-                        color: Colors.blue,
-                        textColor: Colors.white,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                        ),
                         child: const Text(
                           'Sign In',
-                          style: TextStyle(fontSize: 15),
+                          style: TextStyle(fontSize: 15, color: Colors.white),
                         ),
                       ),
                       SizedBox(
                         width: 20,
                       ),
-                      MaterialButton(
+                      ElevatedButton(
                         onPressed: () {
                           // Handle reset password logic here
                         },
-                        color: Colors.grey,
-                        textColor: Colors.white,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                        ),
                         child: const Text(
                           'Reset Password',
-                          style: TextStyle(fontSize: 15),
+                          style: TextStyle(fontSize: 15, color: Colors.white),
                         ),
                       ),
                     ],
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const RegisterPage(),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    "Sign up here.",
+                    style: TextStyle(fontSize: 16, color: Colors.blue),
                   ),
                 ),
               ],
