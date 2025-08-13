@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_auth_app/auth_service.dart';
 import 'package:my_auth_app/register_page.dart';
+import 'package:my_auth_app/reset_pass.dart';
 import 'package:my_auth_app/welcome.dart';
 
 class LoginPage extends StatefulWidget {
@@ -127,6 +128,12 @@ class _LoginPageState extends State<LoginPage> {
                       ElevatedButton(
                         onPressed: () {
                           // Handle reset password logic here
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ResetPass(),
+                            ),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,

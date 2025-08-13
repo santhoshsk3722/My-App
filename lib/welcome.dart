@@ -37,7 +37,7 @@ class _WelcomeState extends State<Welcome> {
                   ),
                 );
               },
-              child: Text("LogOut"),
+              child: Text("Next Page"),
             ),
             ElevatedButton(
               onPressed: () {
