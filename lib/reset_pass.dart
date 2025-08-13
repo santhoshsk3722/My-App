@@ -41,11 +41,12 @@ class _ResetPassState extends State<ResetPass> {
                         email: emailController.text.trim(),
                       );
                       // Navigate to LoginPage without back option
-                      Navigator.pushReplacement(
+                      Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
                           builder: (context) => const LoginPage(),
                         ),
+                        (route) => false,
                       );
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
